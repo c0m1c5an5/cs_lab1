@@ -37,11 +37,6 @@ int main(int argc, char *argv[])
     {
         read_shift = 0;
 
-        if (fread_read_chars != buffer_size)
-        {
-            buffer[fread_read_chars] = '\0';
-        }
-
         for (unsigned long i = 0; i < buffer_size / 3; i++)
         {
             memset(bytes, 0, 3);
@@ -49,7 +44,7 @@ int main(int argc, char *argv[])
 
             for (unsigned char i = 0; i < 3; i++)
             {
-                if (buffer[read_shift] == '\0')
+                if (read_shift == fread_read_chars)
                 {
                     if (base_read_chars == 0)
                     {

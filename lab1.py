@@ -42,7 +42,7 @@ entropy = entropy * -1
 
 print("File name: " + filename)
 print("File size: " + str(os.path.getsize(filename)) + " bytes")
-print("Information amount: " + str(number_of_characters * entropy) + " bytes")
+print("Information amount: " + str(number_of_characters * entropy / 8) + " bytes")
 print("Number of characters: " + str(number_of_characters))
 print("Number of unique characters " + str(number_of_unique))
 print("Entropy: " + str(entropy) + "\n")
